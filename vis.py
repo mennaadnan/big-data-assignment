@@ -4,8 +4,8 @@ import matplotlib.pyplot as plt
 def visualization(df):
     # Generate the heatmap
     sns.heatmap(df.corr(), annot=True)
-    plt.savefig("vis.png")  # Save the heatmap visualization
+    plt.savefig("vis.png")
     
-    # Now, pass the data to the next step (modeling)
+    #pass the data to the next step
     from model import kmeans
-    kmeans(df)  # Pass the data for KMeans clustering
+    kmeans(df) 
