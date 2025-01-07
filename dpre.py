@@ -29,5 +29,5 @@ def preprocessing(df):
     # Save the preprocessed data to a CSV file
     df.to_csv("res_dpre.csv", index=False)
     
-    return df  # Return the processed dataframe for the next script
+    return df 
 
