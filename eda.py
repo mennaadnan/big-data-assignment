@@ -19,8 +19,7 @@ def eda(df):
     unique_status = df['Customer Status'].unique()
     uniq_values = ', '.join(map(str, unique_status))  # Show before encoding
     with open("eda-in-3.txt", "a") as eda3:
-        eda3.write(f"The column Customer Status has {len(unique_status)} unique values: {uniq_values}\n")
-        eda3.write("These unique values can be made to 3 with data transformation.\n")
+        eda3.write(f"The column Customer Status has {len(df['Customer Status'].unique())} unique values: {uniq_values}\n")
     
     # Proceed to next stage (visualization)
     from vis import visualization
