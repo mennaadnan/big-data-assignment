@@ -1,0 +1,2 @@
+The column Customer Status has 3 unique values: 1.0,0.0,0.5
+These unique values can be made to 3 with data transformation.
