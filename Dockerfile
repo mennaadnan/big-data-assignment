@@ -9,11 +9,7 @@ RUN apt-get update && apt-get install -y \
 
 # Create a virtual environment
 RUN python3 -m venv /opt/venv
-
-# Activate the virtual environment and install Python libraries
 RUN /opt/venv/bin/pip install pandas numpy seaborn matplotlib scikit-learn scipy
-
-# Set the virtual environment as the default Python environment
 ENV PATH="/opt/venv/bin:$PATH"
 
 # Create a directory inside the container
@@ -25,5 +21,4 @@ WORKDIR /home/doc-bd-a1/
 # Copy the dataset to the container
 COPY orders.csv /home/doc-bd-a1/
 
-# Start a bash shell on container startup
 CMD ["bash"]
