@@ -1,10 +1,7 @@
 from sklearn.cluster import KMeans
 
 def kmeans(df):
-    X = df
-    y = df['Customer Status']
-    
-    # Apply KMeans clustering
+    X = df   
     kmeans = KMeans(n_clusters=3, random_state=0)
     kmeans.fit(X)
     
